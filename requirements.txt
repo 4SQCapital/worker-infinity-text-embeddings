@@ -2,6 +2,6 @@
 runpod~=1.7.0
 infinity-emb[all]==0.0.76
 optimum<2.0
-transformers<4.49
+transformers==4.47.1
 einops
 git+https://github.com/pytorch-labs/float8_experimental.git
