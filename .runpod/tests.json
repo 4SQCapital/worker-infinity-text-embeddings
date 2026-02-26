@@ -1,23 +1,28 @@
 {
   "tests": [
-    {
-      "name": "basic_test",
-      "input": {
-        "model": "BAAI/bge-small-en-v1.5",
-        "input": "Hello, world!"
-      },
-      "timeout": 10000
-    }
-  ],
-  "config": {
-    "gpuTypeId": "NVIDIA RTX A5000",
-    "gpuCount": 1,
-    "allowedCudaVersions": ["12.7", "12.6", "12.5", "12.4"],
-    "env": [
       {
-        "key": "MODEL_NAMES",
-        "value": "BAAI/bge-small-en-v1.5"
+        "name": "rerank_test",
+        "input": {
+          "model": "BAAI/bge-reranker-v2-m3",
+          "query": "What is the capital of France?",
+          "docs": [
+            "Paris is the capital of France.",
+            "London is the capital of England.",
+            "Berlin is the capital of Germany."
+          ],
+          "return_docs": false
+        },
+        "timeout": 300000
       }
-    ]
+    ],
+    "config": {
+      "gpuTypeId": "NVIDIA RTX A5000",
+      "gpuCount": 1,
+      "allowedCudaVersions": ["12.7", "12.6", "12.5", "12.4"],
+      "env": [
+        { "key": "MODEL_NAMES", "value": "BAAI/bge-reranker-v2-m3" },
+        { "key": "DTYPES", "value": "float16" },
+        { "key": "BACKEND", "value": "torch" }
+      ]
+    }
   }
-}
