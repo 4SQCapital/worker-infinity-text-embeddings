@@ -16,7 +16,7 @@
       }
     ],
     "config": {
-      "gpuTypeId": "NVIDIA GeForce RTX 3090",
+      "gpuTypeId": "NVIDIA A40",
       "gpuCount": 1,
       "allowedCudaVersions": ["12.7", "12.6", "12.5", "12.4"],
       "env": [
