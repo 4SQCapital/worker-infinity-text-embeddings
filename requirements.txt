@@ -1,3 +1,4 @@
+# pinned optimum to <2.0 for infinity-emb 0.0.76 compatibility
 runpod~=1.7.0
 infinity-emb[all]==0.0.76
 optimum<2.0
